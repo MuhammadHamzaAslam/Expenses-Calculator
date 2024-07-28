@@ -1,0 +1,7 @@
+#side-bar{
+    background-color: blue;
+}
+.xyz{
+    display: flex;
+    justify-content: space-evenly;
+}
