@@ -5,39 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Friend</title>
     <link rel="stylesheet" href="Files/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div>
-        <h1>Your Budget</h1>
-        <input type="number" name="" placeholder="Enter Your Budget" id="budget-inp">
-        <button id="set-budget">Set Budget</button>
-    </div>
-    <br>
-    <div>
-        <input type="text" required name="" placeholder="Enter Product Name" id="product">
-        <br><br>
-        <input type="number" required placeholder="Enter Product Coast" name="" id="product-coast">
-        <button id="check-amount">Check Amount</button>
-    </div>
-
-    <div id="side-bar">
-        <div class="xyz">
-            <h1>Total Budget</h1>
-            <h1>Expenses</h1>
-            <h1>Balance</h1>
+    <div class="container">
+        <div class="budget-section">
+            <h1>Expenses Manager</h1>
+            <input type="number" name="" placeholder="Enter Your Budget" id="budget-inp">
+            <button id="set-budget">Set Budget</button>
         </div>
-        <div class="xyz">
-            <p id="showBudget">0</p>
-            <p id="showExpenses">0</p>
-            <p id="showBalance">0</p>
+        <div class="expense-section">
+            <input type="text" required name="" placeholder="Enter Product Name" id="product">
+            <input type="number" required placeholder="Enter Product Cost" name="" id="product-coast">
+            <button id="check-amount">Check Amount</button>
+        </div>
+        <div id="side-bar">
+            <div class="summary">
+                <h2>Total Budget</h2>
+                <p id="showBudget">0</p>
+            </div>
+            <div class="summary">
+                <h2>Expenses</h2>
+                <p id="showExpenses">0</p>
+            </div>
+            <div class="summary">
+                <h2>Balance</h2>
+                <p id="showBalance">0</p>
+            </div>
+        </div>
+        <div class="expenses-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Product Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
         </div>
     </div>
-    <div class="Expenses-list">
-        <ul>
-
-        </ul>
-    </div>
-
     <script src="Files/app.js"></script>
 </body>
 </html>
